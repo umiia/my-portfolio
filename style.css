@@ -1,0 +1,312 @@
+CSS
+/* ==========================================
+   1. リセット & 全体設定
+   ========================================== */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+html, body {
+
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+  
+/* フォントクラス */
+.zen-kurenaido-regular { font-family: "Zen Kurenaido", sans-serif; }
+.kosugi-maru-regular { font-family: "Kosugi Maru", sans-serif; }
+.dm-serif-display-regular { font-family: "DM Serif Display", serif; }
+.m-plus-rounded-1c-regular { font-family: "M PLUS Rounded 1c", sans-serif; }
+.playfair-display-regular { font-family: "Playfair Display", serif; }
+
+
+/* ==========================================
+   2. ヘッダー & ナビゲーション
+   ========================================== */
+header {
+    position: fixed ;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  
+  
+  /* すりガラス効果 */
+ background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.9) 0%,   
+    rgba(255, 255, 255, 0) 100% 
+  );
+ 
+  width: 100;
+  padding: 5px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+header .color {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-weight: 150;
+  font-size: 50px;
+  color: rgb(0, 0, 0);
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+header nav ul li a {
+  font-family: "Playfair Display", serif;
+  font-size: 15px;
+  color: #000;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+header nav ul li a:hover {
+  opacity: 1;
+}
+
+.header-logo .logo-img{
+    height: 90px;                 
+  width: auto;                 
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* ==========================================
+   3. メインビジュアル (.main)
+   ========================================== */
+.hero img {
+  width: 100%;
+}
+
+.main {
+  background-image: url("./images/DSC_1662 (1).jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 150vh;
+  width: 100%;
+}
+
+.main .container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1280px;
+  height: 640px;
+  position: relative;
+}
+
+.main .title {
+  position: absolute;
+  bottom: 50px; 
+  left: 50px;   
+}
+
+.main h2 {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 80px;
+  font-weight: 300;
+  color: white;
+}
+
+.main p {
+  font-family: "Playfair Display", serif;
+  font-weight: 100;
+  font-size: 20px;
+  color: white;
+}
+
+
+/* ==========================================
+   4. サイト二段目 (.content1 / .about-section)
+   ========================================== */
+.about-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 300px 20px;
+}
+
+/* 「ABOUT」見出し */
+.about-title {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  letter-spacing: 0.1em;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.about-container {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  gap: 60px; /* 写真とテキストの間隔 */
+}
+
+/* 写真のサイズ固定 */
+.about-image img {
+  width: 320px;
+  height: 320px;
+  object-fit: cover; 
+}
+
+.about-content {
+  text-align: left;
+  max-width: 450px;
+}
+
+.about-name {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-bottom: 4px;
+
+}
+ 
+.about-job {
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 36px;
+}
+.about-text p {
+  font-family: "Shippori Mincho", "Yu Mincho", "游明朝", serif;
+  font-size: 14px;         
+  line-height: 2.0;
+  letter-spacing: 0.12em;
+  color: #666;             
+  margin-bottom: 6px;
+}
+.statement {
+    font-family: "Shippori Mincho", "Yu Mincho", "游明朝", serif; 
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 2.2;        
+  letter-spacing: 0.15em;  
+  color: #111;
+  margin-bottom: 32px;
+  padding-left: 0;
+}
+
+.about-content {
+     text-align: left; 
+  max-width: 400px; 
+  margin-left: 60px;
+}
+ 
+.statement {
+  text-align: left;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+/* ワークスペース */
+.works-section {
+  padding: 0 20px;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.works-grid img {
+  width: 50%;
+  height: auto;
+  display: block;
+}
+ 
+.section-title {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 60px; 
+  text-align: center;  
+}
+
+/* スライドショー */
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 1500px; 
+  height: 800px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  overflow: visible;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity  1.5s ease-in-out;
+
+}
+  .slide.active {
+  opacity: 1;
+}
+
+.slide:nth-child(1) {
+  animation-delay: 0s;
+}
+.slide:nth-child(2) {
+  animation-delay: 4s;
+}
+
+@keyframes fadeSlide {
+  0% { opacity: 0; }
+  15% { opacity: 1; }
+  40% { opacity: 1; }
+  55% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* スライドショー　ドット */
+
+.dots-container {
+  position: absolute;
+  top: 95%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+  z-index: 99999; 
+}
+.dot {
+  width: 6px;
+  height: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.8); /* 普段は白い枠線のみ */
+  border-radius: 50%;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+
+

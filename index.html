@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>海 Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=M+PLUS+Rounded+1c:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1 class="header-logo">
+  <a href="#">
+    <img src="images/IMG_1552.png" alt="umi" class="logo-img">
+  </a>
+    <nav>
+      <ul>
+        <!-- ナビ要素が入る場合 -->
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">WORKS</a></li>
+        <li><a href="#">PORTFOLIO</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 画像上のタイトル -->
+
+  <main>
+    <section class="main">
+      <div class="container">
+        <div class="title">
+
+        </div>
+      </div>
+    </section>
+
+    <!-- サイト二段目 -->
+     
+   <section class="about-section">
+  <!-- タイトル部分 -->
+  <h2 class="about-title"></h2>
+
+  <!-- 写真とテキストのセット -->
+  <div class="about-container">
+    <div class="about-image">
+        <img src="images/DSC_1662.jpeg" alt="">
+    </div>
+
+    <div class="about-content">
+      <h3 class="about-name">UMI / うみ</h3>
+      <p></p>
+      <p class="about-job">Photographer / Graphic design</p>
+      
+
+      <blockquote class="statement">
+      青を基調とした色彩表現と透明感。<br>
+      静かな一瞬と、空間の記憶を記録する。
+    </blockquote>
+
+      <div class="about-text">
+       <p>2007年生まれ、長野県出身。</p>
+       <p>長野県と新潟県を中心に活動中。</p>
+       <p>使用アプリケーション</p>
+       <p>Lightroom Classic / Photoshop / Illustrator</p>
+      </div>
+
+      <!-- ワークスペース -->
+
+      <!-- スライドショー -->
+</section id="works" class="works-section">
+    <h2 class="section-title">WORKS</h2>
+
+       <div class="slideshow-container">
+
+        <img src="images/DSC_1360.jpeg" alt="" class="slide">
+        <img src="images/SnapInsta.to_543801047_17853361830535765_1311947479767251634_n.jpg" alt="" class="slide">
+        <div class="dots-container">
+
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+    let slideInterval;           
+    const intervalTime = 4000; 
+    showSlides(slideIndex);
+    startAutoSlide();           
+
+    function startAutoSlide() {
+    slideInterval = setInterval(() => {
+        plusSlides(1); 
+    }, intervalTime);
+}
+
+    function resetAutoSlide() {
+    clearInterval(slideInterval); 
+    startAutoSlide();             
+}
+
+
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    resetAutoSlide(); 
+}
+
+
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    resetAutoSlide(); 
+}
+
+
+    function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("slide");
+    let dots = document.getElementsByClassName("dot");
+    
+    if (n > slides.length) { slideIndex = 1; }
+    if (n < 1) { slideIndex = slides.length; }
+    
+    
+    for (i = 0; i < slides.length; i++) {
+        slides[i].classList.remove("active");
+    }
+    
+    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+    }
+    
+    slides[slideIndex - 1].classList.add("active");
+    dots[slideIndex - 1].classList.add("active");
+}
+
+
+    </script>
+  </main>
+</body>
+</html>
